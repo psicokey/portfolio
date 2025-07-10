@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -21,12 +22,13 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   return (
-    <nav className="bg-white sticky top-0  dark:bg-gray-800 shadow-md py-4 px-6 transition-colors duration-300">
+    <nav className="bg-white sticky top-0  dark:bg-gray-800 shadow-md py-4 px-6 transition-colors duration-300 z-10">
       <div className=" bg-white dark:bg-gray-800 shadow-md max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-bold text-blue-600 dark:text-blue-400 transition-colors"
+          className="flex items-center text-xl font-bold text-blue-600 dark:text-blue-400 transition-colors"
         >
+          <Image src={"/keyLogo.png"} alt="Keyberth Márquez" width={40} height={40} className="rounded-lg object-cover" /> 
           Keyberth Márquez
         </Link>
 

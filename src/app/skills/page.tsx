@@ -20,18 +20,18 @@ const skills = [
   { name: "JavaScript", level: "Intermedio", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "React", level: "Intermedio", icon: <SiReact className="text-cyan-500" /> },
   { name: "Node.js / Express", level: "Intermedio", icon: <SiNodedotjs className="text-green-600" /> },
-  { name: "Next.js", level: "Intermedio", icon: <SiNextdotjs className="text-gray-800 dark:text-white" /> },
+  { name: "Next.js", level: "Intermedio", icon: <SiNextdotjs className="text-gray-300" /> },
   { name: "Tailwind CSS", level: "Intermedio", icon: <SiTailwindcss className="text-cyan-400" /> },
   { name: "VSCode", level: "Intermedio", icon: <BiLogoVisualStudio className="text-blue-400" /> },
-  { name: "Git / GitHub", level: "Intermedio", icon: <SiGithub className="text-gray-800 dark:text-white" /> },
+  { name: "Git / GitHub", level: "Intermedio", icon: <SiGithub className="text-white" /> },
   { name: "MySQL", level: "Intermedio", icon: <SiMysql className="text-blue-700" /> },
   { name: "Trello", level: "Intermedio", icon: <SiTrello className="text-blue-500" /> },
 ];
 
 export default function SkillsPage() {
   return (
-    <section className="max-w-3xl mx-auto mt-24 py-12 px-6 bg-black rounded-2xl shadow-lg border border-gray-100">
-      <h1 className="text-3xl font-bold mb-8 text-gray-300 text-center">Habilidades Técnicas</h1>
+    <section className="flex flex-col items-center max-w-2xl mx-auto mt-24 mb-8 py-12 px-6 bg-white dark:bg-gray-900 rounded-lg shadow-md border border-gray-100 dark:border-gray-800 transition-colors">
+      <h1 className=" text-gray-700 dark:text-gray-300 not-visited:text-3xl font-bold mb-8 text-center">Habilidades Técnicas</h1>
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {skills.map((skill) => (
           <li
