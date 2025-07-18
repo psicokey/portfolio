@@ -5,55 +5,60 @@ import ProjectCard from '@/components/shared/ProjectCard';
 import { FaLaptopCode, FaServer, FaMobile, FaTools } from 'react-icons/fa';
 
 // Lista de proyectos
-const projects = [
-  {
-    title: "Portfolio Personal",
-    description: "Mi propio portfolio desarrollado con Next.js y Tailwind CSS. Diseño moderno, responsive y modo oscuro.",
-    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
-    githubUrl: "https://github.com/tu-usuario/tu-repo",
-    liveUrl: "https://tu-portfolio.com",
+const projects = [  
+    {
+    title: "Vizcaino Consulting",
+    description: "Sitio web informativo para una psicologa, con diseño basico y enfoque en la usabilidad.",
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    imageUrls: [
+      '/projects/consulting1.png',
+      '/projects/consulting2.png',
+      '/projects/consulting3.png',
+    ],
+    liveUrl: "https://vizcainoconsulting.com",
     category: "frontend",
     featured: true,
   },
   {
     title: "Gestor de Tareas",
     description: "Aplicación web para gestionar tareas con autenticación de usuarios y base de datos en tiempo real.",
-    technologies: ['React', 'Firebase', 'Material UI'],
-    githubUrl: "https://github.com/tu-usuario/gestor-tareas",
-    liveUrl: "https://gestor-tareas-ejemplo.com",
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    imageUrls: [
+      '/projects/mindfultask0.png',
+      '/projects/mindfultask1.png',
+      '/projects/mindfultask2.png',
+    ],
+    githubUrl: "https://github.com/psicokey/mindfultask",
+    liveUrl: "/#",
     category: "fullstack",
   },
   {
-    title: "E-commerce",
-    description: "Tienda online completa con carrito de compras, pasarela de pago y panel de administración.",
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: "https://github.com/tu-usuario/ecommerce",
+    title: "Practica E-commerce",
+    description: "Tienda online completa con carrito de compras, pasarela de pago con shopify API y chatbot.",
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript','Shopify API'],
+    imageUrls: [
+      '/projects/Ecommerce1.png',
+      '/projects/Ecommerce2.png',
+      '/projects/Ecommerce3.png',
+      '/projects/Ecommerce4.png',
+      '/projects/Ecommerce5.png',
+    ],
+    
+    githubUrl: "https://github.com/psicokey/nextjs-1",
     category: "fullstack",
   },
   {
-    title: "Clon de Spotify",
-    description: "Réplica de Spotify con reproducción de música en tiempo real y listas de reproducción personalizadas.",
-    technologies: ['React', 'Redux', 'Spotify API'],
-    githubUrl: "https://github.com/tu-usuario/spotify-clone",
-    liveUrl: "https://spotify-clone-ejemplo.com",
+    title: "Portfolio Personal",
+    description: "Mi propio portfolio desarrollado con Next.js y Tailwind CSS. Diseño moderno, responsive y modo oscuro.",
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    imageUrls: [
+      '/projects/portfolio1.png',
+    ],
+    githubUrl: "https://github.com/psicokey/portafolio",
+    liveUrl: "https://tu-portfolio.com",
     category: "frontend",
   },
-  {
-    title: "Blog Personal",
-    description: "Blog técnico con sistema de comentarios, búsqueda y categorías. Generación estática con Markdown.",
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    githubUrl: "https://github.com/tu-usuario/blog",
-    liveUrl: "https://mi-blog-tecnico.com",
-    category: "frontend",
-  },
-  {
-    title: "App del Clima",
-    description: "Aplicación que muestra el clima actual y pronóstico utilizando una API meteorológica.",
-    technologies: ['React', 'OpenWeatherMap API', 'CSS Modules'],
-    githubUrl: "https://github.com/tu-usuario/app-clima",
-    liveUrl: "https://app-clima-ejemplo.com",
-    category: "frontend",
-  },
+  
 ];
 
 // Filtros disponibles
@@ -104,16 +109,18 @@ export default function ProjectsPage() {
       <Section title="Proyectos en Progreso">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <ProjectCard 
-            title="Plataforma de Aprendizaje"
-            description="Sistema educativo con cursos interactivos, seguimiento de progreso y certificados."
-            technologies={['Next.js', 'MongoDB', 'Stripe', 'Auth0']}
-            progress={75}
+            title="Practica Clon de Spotify"
+            description="Clon de la interfaz de Spotify con funcionalidades básicas de reproducción y búsqueda de música."
+            imageUrls={['/projects/comingsoon2.png']}
+            technologies={['React', 'Tailwind CSS', 'Spotify API']}
+            progress={50}
             category="fullstack"
           />
           
           <ProjectCard 
             title="App de Finanzas Personales"
             description="Herramienta para gestionar ingresos, gastos y presupuestos con visualización de datos."
+            imageUrls={['/projects/comingsoon2.png']}
             technologies={['React Native', 'Firebase', 'Recharts']}
             progress={50}
             category="app"

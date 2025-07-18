@@ -2,11 +2,15 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import ImageCarousel from './ImageCarousel';
+import { ImageIcon } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
+  imageUrls?: string[]; // Array de URLs de imágenes
+  imageAlt?: string; // Texto alternativo para la imagen
   githubUrl?: string;
   liveUrl?: string;
   category?: string;
@@ -17,26 +21,30 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
   title, 
   description, 
-  technologies, 
+  technologies,
+  imageUrls,
+  imageAlt = "Imagen del proyecto", 
   githubUrl, 
   liveUrl,
   category,
   progress,
   featured = false
 }) => {
-  // Determinar el color según la categoría
-  const getCategoryColor = () => {
-    switch (category) {
-      case 'frontend':
-        return 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 border-blue-300';
-      case 'fullstack':
-        return 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 border-purple-300';
-      case 'app':
-        return 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 border-green-300';
-      default:
-        return 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 border-gray-300';
-    }
+  const categoryConfig = {
+    frontend: {
+      label: 'Frontend',
+      className: 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 border-blue-300',
+    },
+    fullstack: {
+      label: 'Full Stack',
+      className: 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 border-purple-300',
+    },
+    app: {
+      label: 'Aplicación',
+      className: 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 border-green-300',
+    },
   };
+  const currentCategory = category && categoryConfig[category as keyof typeof categoryConfig];
 
   return (
     <motion.div 
@@ -49,14 +57,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       transition={{ duration: 0.3 }}
     >
       <div className="relative">
-        {/* Placeholder para imagen del proyecto */}
-        <div className="bg-gradient-to-r from-blue-400 to-indigo-600 h-48 flex items-center justify-center">
-          <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center">
-            <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
-              <div className="bg-gray-200 dark:bg-gray-700 border-2 border-dashed rounded-xl w-16 h-16" />
+        {imageUrls && imageUrls.length > 0 ? (
+          <ImageCarousel imageUrls={imageUrls} alt={imageAlt} />
+        ) : (
+          <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+            <div className="text-center text-gray-500 dark:text-gray-400">
+              <ImageIcon className="w-12 h-12 mx-auto" />
+              <span className="mt-2 block text-sm">Imágenes no disponibles</span>
             </div>
           </div>
-        </div>
+        )}
         
         {featured && (
           <div className="absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded-full flex items-center text-sm">
@@ -66,11 +76,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       
       <div className="p-5">
-        {category && (
-          <span className={`text-xs font-medium px-2 py-1 rounded-full border ${getCategoryColor()}`}>
-            {category === 'frontend' ? 'Frontend' : 
-             category === 'fullstack' ? 'Full Stack' : 
-             category === 'app' ? 'Aplicación' : 'Otro'}
+        {currentCategory && (
+          <span className={`text-xs font-medium px-2 py-1 rounded-full border ${currentCategory.className}`}>
+            {currentCategory.label}
           </span>
         )}
         
@@ -78,9 +86,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
         
         <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, index) => (
+          {technologies.map((tech) => (
             <span 
-              key={index} 
+              key={tech} 
               className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs px-2 py-1 rounded"
             >
               {tech}
