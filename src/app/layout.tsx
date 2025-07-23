@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes';
 import Navbar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}
       >
+      <Analytics />
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 
         <Navbar />
