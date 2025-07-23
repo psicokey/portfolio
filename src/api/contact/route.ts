@@ -34,7 +34,14 @@ export async function POST(request: NextRequest) {
       from: "Portfolio Contact <onboarding@resend.dev>", // Para producción, usa un dominio verificado. ej: 'contacto@tudominio.com'
       to: emailTo,
       subject: `Nuevo mensaje de ${name} desde tu portafolio`,
-      html: `<p><strong>Nombre:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Mensaje:</strong> ${message}</p>`,
+      html: `
+        <h1>Nuevo Mensaje del Portafolio</h1>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email de contacto:</strong> ${email}</p>
+        <hr />
+        <p><strong>Mensaje:</strong></p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
+      `,
     });
 
     return NextResponse.json(
