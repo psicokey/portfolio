@@ -43,8 +43,14 @@ export default function ContactPage() {
               });
 
               if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.error || "Algo salió mal.");
+                const contentType = response.headers.get("content-type");
+                if (contentType && contentType.includes("application/json")) {
+                  const data = await response.json();
+                  throw new Error(data.error || "Algo salió mal.");
+                } else {
+                  // El servidor devolvió un error no-JSON (ej. un crash)
+                  throw new Error(`Error del servidor: ${response.status} ${response.statusText}`);
+                }
               }
 
               setStatus("success");
