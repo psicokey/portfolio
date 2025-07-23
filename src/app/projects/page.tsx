@@ -22,14 +22,13 @@ const projects = [
   {
     title: "Gestor de Tareas",
     description: "Aplicación web para gestionar tareas con autenticación de usuarios y base de datos en tiempo real.",
-    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Mysql'],
     imageUrls: [
       '/projects/mindfultask0.png',
       '/projects/mindfultask1.png',
       '/projects/mindfultask2.png',
     ],
     githubUrl: "https://github.com/psicokey/mindfultask",
-    liveUrl: "/#",
     category: "fullstack",
   },
   {
@@ -55,7 +54,6 @@ const projects = [
       '/projects/portfolio1.png',
     ],
     githubUrl: "https://github.com/psicokey/portafolio",
-    liveUrl: "https://tu-portfolio.com",
     category: "frontend",
   },
   

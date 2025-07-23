@@ -100,7 +100,7 @@ export default function HomePage() {
                         <FaLinkedin size={24} />
                       </a>
                       <a
-                        href="#contact"
+                        href="/contact"
                         className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 shadow"
                         aria-label="Email"
                       >
