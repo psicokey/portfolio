@@ -24,7 +24,7 @@ export default function Footer() {
 
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
-        <a className="text-gray-700 dark:text-gray-200 transition hover:text-gray-700/75 dark:hover:text-gray-300" href="#"> Inicio </a>
+        <a className="text-gray-700 dark:text-gray-200 transition hover:text-gray-700/75 dark:hover:text-gray-300" href=""> Inicio </a>
       </li>
 
       <li>
@@ -32,7 +32,7 @@ export default function Footer() {
       </li>
 
       <li>
-        <a className="text-gray-700 dark:text-gray-200 transition hover:text-gray-700/75 dark:hover:text-gray-300" href="#"> Proyectos </a>
+        <a className="text-gray-700 dark:text-gray-200 transition hover:text-gray-700/75 dark:hover:text-gray-300" href="/projects"> Proyectos </a>
       </li>
 
       <li>
