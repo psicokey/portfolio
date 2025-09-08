@@ -96,14 +96,17 @@ export default function AboutPage() {
               <SkillCategory title="Frontend" skills={[
                 { name: "HTML / CSS", level: 85 },
                 { name: "JavaScript", level: 80 },
+                { name: "Tailwind CSS", level: 75 },
+                { name: "TypeScript", level: 70 },
                 { name: "React", level: 60 },
                 { name: "Next.js", level: 60 },
-                { name: "Tailwind CSS", level: 75 }
               ]} />
               
               <SkillCategory title="Backend" skills={[
                 { name: "Node.js", level: 75 },
                 { name: "Express", level: 70 },
+                { name: "NestJS", level: 60 },
+                { name: "Laravel", level: 50 },
                 { name: "RESTful APIs", level: 80 }
               ]} />
               

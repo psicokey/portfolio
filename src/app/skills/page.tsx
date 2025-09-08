@@ -11,6 +11,9 @@ import {
   SiGithub,
   SiMysql,
   SiTrello,
+  SiTypescript,
+  SiNestjs,
+  SiLaravel
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
@@ -18,10 +21,13 @@ const skills = [
   { name: "HTML5", level: "Avanzado", icon: <SiHtml5 className="text-orange-500" /> },
   { name: "CSS3", level: "Avanzado", icon: <SiCss3 className="text-blue-500" /> },
   { name: "JavaScript", level: "Intermedio", icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "TypeScript", level: "Intermedio", icon: <SiTypescript className="text-blue-600" /> },
+  { name: "Tailwind CSS", level: "Intermedio", icon: <SiTailwindcss className="text-cyan-400" /> },
   { name: "React", level: "Intermedio", icon: <SiReact className="text-cyan-500" /> },
   { name: "Node.js / Express", level: "Intermedio", icon: <SiNodedotjs className="text-green-600" /> },
   { name: "Next.js", level: "Intermedio", icon: <SiNextdotjs className="text-gray-300" /> },
-  { name: "Tailwind CSS", level: "Intermedio", icon: <SiTailwindcss className="text-cyan-400" /> },
+  { name: "NestJS", level: "Básico", icon: <SiNestjs className="text-rose-800" /> },
+  { name: "Laravel", level: "Básico", icon: <SiLaravel className="text-red-700" /> },
   { name: "VSCode", level: "Intermedio", icon: <BiLogoVisualStudio className="text-blue-400" /> },
   { name: "Git / GitHub", level: "Intermedio", icon: <SiGithub className="text-white" /> },
   { name: "MySQL", level: "Intermedio", icon: <SiMysql className="text-blue-700" /> },
