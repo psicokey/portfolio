@@ -13,7 +13,9 @@ import {
   SiTrello,
   SiTypescript,
   SiNestjs,
-  SiLaravel
+  SiLaravel,
+  SiWordpress,
+  SiShopify
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
@@ -28,6 +30,8 @@ const skills = [
   { name: "Next.js", level: "Intermedio", icon: <SiNextdotjs className="text-gray-300" /> },
   { name: "NestJS", level: "Básico", icon: <SiNestjs className="text-rose-800" /> },
   { name: "Laravel", level: "Básico", icon: <SiLaravel className="text-red-700" /> },
+  { name: "Shopify", level: "Básico", icon: <SiShopify className="text-green-500" /> },
+  {name: "WordPress", level: "Básico", icon: <SiWordpress className="text-blue-600" />},
   { name: "VSCode", level: "Intermedio", icon: <BiLogoVisualStudio className="text-blue-400" /> },
   { name: "Git / GitHub", level: "Intermedio", icon: <SiGithub className="text-white" /> },
   { name: "MySQL", level: "Intermedio", icon: <SiMysql className="text-blue-700" /> },

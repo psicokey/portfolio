@@ -112,7 +112,9 @@ export default function AboutPage() {
               
               <SkillCategory title="Herramientas" skills={[
                 { name: "Git / GitHub", level: 70 },
-                { name: "MySQL", level: 60 }
+                { name: "MySQL", level: 60 },
+                { name: "Shopify", level: 60 },
+                { name: "WordPress", level: 50 },
               ]} />
               
               <SkillCategory title="Habilidades Blandas" skills={[
