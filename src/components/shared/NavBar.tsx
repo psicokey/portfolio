@@ -1,25 +1,26 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
-  { name: 'Inicio', path: '/' },
-  { name: 'Sobre mí', path: '/about' },
-  { name: 'Proyectos', path: '/projects' },
-  { name: 'Habilidades', path: '/skills' },
-  { name: 'Contacto', path: '/contact' },
-]
+  { name: "Inicio", path: "/" },
+  { name: "Sobre mí", path: "/about" },
+  { name: "Proyectos", path: "/projects" },
+  { name: "Servicios", path: "/services" },
+  { name: "Habilidades", path: "/skills" },
+  { name: "Contacto", path: "/contact" },
+];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const toggleMenu = () => setMenuOpen(!menuOpen)
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <nav className="bg-white sticky top-0  dark:bg-gray-800 shadow-md py-4 px-6 transition-colors duration-300 z-10">
@@ -28,7 +29,13 @@ export default function Navbar() {
           href="/"
           className="flex items-center text-xl font-bold text-blue-600 dark:text-blue-400 transition-colors"
         >
-          <Image src={"/keyLogo.png"} alt="Keyberth Márquez" width={40} height={40} className="rounded-lg object-cover" /> 
+          <Image
+            src={"/keyLogo.png"}
+            alt="Keyberth Márquez"
+            width={40}
+            height={40}
+            className="rounded-lg object-cover"
+          />
           Keyberth Márquez
         </Link>
 
@@ -40,8 +47,8 @@ export default function Navbar() {
               className={`transition font-medium
                 ${
                   pathname === item.path
-                    ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                    : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? "text-blue-600 dark:text-blue-400 font-semibold"
+                    : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 }`}
             >
               {item.name}
@@ -70,8 +77,8 @@ export default function Navbar() {
               className={`block transition font-medium
                 ${
                   pathname === item.path
-                    ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                    : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? "text-blue-600 dark:text-blue-400 font-semibold"
+                    : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 }`}
               onClick={() => setMenuOpen(false)}
             >
@@ -82,5 +89,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

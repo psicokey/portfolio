@@ -37,45 +37,61 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Desarrollador Web · React · Node · Next.js
+            Desarrollador Web Full-Stack
           </motion.h1>
 
           <motion.p
-            className="mt-6 max-w-xl text-gray-500 dark:text-gray-400"
+            className="mt-2 text-xl md:text-2xl text-blue-600 dark:text-blue-400 font-semibold"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            React · Next.js · Node.js · APIs
+          </motion.p>
+
+          <motion.p
+            className="mt-6 max-w-xl text-gray-600 dark:text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Psicólogo convertido en desarrollador web. Apasionado por crear
-            experiencias digitales funcionales, humanas y bien organizadas.
+            Psicólogo convertido en desarrollador web. Especializado en crear
+            aplicaciones web modernas, integración de APIs (Meta Threads,
+            Shopify) y sistemas de automatización para empresas.
           </motion.p>
           <motion.p
-            className="mt-6 mb-6 max-w-xl text-gray-500 dark:text-gray-400"
+            className="mt-4 max-w-xl text-gray-600 dark:text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Como desarrollador de software, mi misión es crear soluciones
-            digitales que mejoren la vida de las personas y optimicen los
-            procesos empresariales. Me apasiona la innovación y el aprendizaje
-            continuo, y busco siempre superar las expectativas de mis clientes.
+            Mi enfoque combina expertise técnico con una fuerte orientación al
+            usuario, creando soluciones digitales que no solo funcionan bien,
+            sino que mejoran la experiencia de las personas y optimizan los
+            procesos empresariales.
           </motion.p>
           <motion.div
-            className="flex flex-col justify-items-center sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col justify-items-center sm:flex-row gap-4 justify-center mb-12 mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <a
-              href="/projects"
+              href="/services"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg font-semibold shadow transition-all duration-300"
+            >
+              Ver Servicios
+            </a>
+            <a
+              href="/projects"
+              className="px-8 py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg font-semibold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300"
             >
               Ver Proyectos
             </a>
             <a
               href="/CV_Keyberth_Marquez_ES2025.pdf"
               download
-              className="px-8 py-4 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg font-semibold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300"
+              className="px-8 py-4 bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white rounded-lg font-semibold transition-all duration-300"
             >
               Descargar CV
             </a>
