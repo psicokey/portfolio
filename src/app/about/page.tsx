@@ -169,8 +169,9 @@ export default function AboutPage() {
             <div className="flex flex-wrap gap-2">
               <LearningTag>TypeScript avanzado</LearningTag>
               <LearningTag>Patrones de diseño</LearningTag>
-              <LearningTag>Autenticación JWT</LearningTag>
               <LearningTag>Optimización de rendimiento</LearningTag>
+              <LearningTag>Desarrollo móvil con React Native</LearningTag>
+              <LearningTag>GraphQL</LearningTag>
             </div>
           </Section>
         </div>
