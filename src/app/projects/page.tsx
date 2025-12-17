@@ -10,14 +10,14 @@ const projects = [
     title: "Vizcaino Consulting",
     description:
       "Sitio web profesional para una psićologa, con diseño optimizado y enfoque en la usabilidad y conversión.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["Laravel", "Tailwind CSS", "JavaScript", "MySQL"],
     imageUrls: [
-      "/projects/consulting1.png",
-      "/projects/consulting2.png",
-      "/projects/consulting3.png",
+      "/projects/consulting4.png",
+      "/projects/consulting5.png",
+      "/projects/consulting6.png",
     ],
     liveUrl: "https://vizcainoconsulting.com",
-    category: "frontend",
+    category: "fullstack",
     featured: true,
   },
   {
