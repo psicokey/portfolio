@@ -7,7 +7,6 @@ import {
   Globe,
   Smartphone,
   MessageSquare,
-  Settings,
   Rocket,
   Zap,
   CheckCircle2,

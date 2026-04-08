@@ -4,14 +4,11 @@
 import { useThemeHandler } from "@/lib/theme-handler";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import {
-  FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaChevronRight,
-  FaFileDownload,
   FaLaptopCode,
   FaServer,
   FaMobile,
@@ -26,9 +23,6 @@ import {
   FaMusic,
   FaRocket,
   FaCog,
-  FaChartLine,
-  FaMobileAlt,
-  FaShieldAlt,
   FaCheckCircle,
 } from "react-icons/fa";
 import {
@@ -48,14 +42,10 @@ import {
   SiJavascript,
   SiNestjs,
   SiLaravel,
-  SiWordpress,
-  SiTrello,
 } from "react-icons/si";
-import { BiLogoVisualStudio } from "react-icons/bi";
+
 import {
   Code2,
-  Briefcase as BriefcaseIcon,
-  GraduationCap as GraduationIcon,
   Rocket as RocketIcon,
   MessageSquare,
 } from "lucide-react";
@@ -297,9 +287,7 @@ const filters = [
 export default function HomePage() {
   useThemeHandler();
   const [activeFilter, setActiveFilter] = useState("all");
-  const [contactStatus, setContactStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
+
 
   const filteredProjects =
     activeFilter === "all"

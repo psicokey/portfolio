@@ -7,7 +7,13 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
-const navItems = [
+interface NavItem {
+  name: string;
+  path: string;
+  isSpecial?: boolean;
+}
+
+const navItems: NavItem[] = [
   { name: "Inicio", path: "/#inicio" },
   { name: "LKE Web", path: "/lke-web", isSpecial: true },
   { name: "Sobre mí", path: "/#sobre-mi" },
@@ -41,7 +47,7 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden xl:flex items-center space-x-2 2xl:space-x-6 pr-4 border-r border-gray-200 dark:border-gray-800 mr-4">
-          {navItems.map((item: any) => (
+          {navItems.map((item: NavItem) => (
             <Link
               key={item.path}
               href={item.path}
@@ -75,7 +81,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="xl:hidden absolute top-full left-0 right-0 px-4 py-6 space-y-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-200 dark:border-gray-800 shadow-2xl animate-in slide-in-from-top duration-300">
-          {navItems.map((item: any) => (
+          {navItems.map((item: NavItem) => (
             <Link
               key={item.path}
               href={item.path}
