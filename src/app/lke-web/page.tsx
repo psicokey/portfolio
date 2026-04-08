@@ -14,6 +14,7 @@ import {
   Layout,
 } from "lucide-react";
 import { FaWhatsapp, FaShopify } from "react-icons/fa";
+import WhatsAppFloat from "@/components/shared/WhatsAppFloat";
 
 const services = [
   {
@@ -388,9 +389,9 @@ export default function LkeWebPage() {
       <footer className="relative z-10 border-t border-gray-100 dark:border-white/5 py-12 px-6 text-center text-gray-500">
         <p>
           © {new Date().getFullYear()} LKE Web - Impulsando negocios en la era
-          digital.
         </p>
       </footer>
+      <WhatsAppFloat />
     </div>
   );
 }
