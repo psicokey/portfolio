@@ -59,7 +59,7 @@ const ThemeToggle = () => {
           )}
         </motion.div>
       </button>
-      <span className="text-sm font-medium">
+      <span className="text-sm font-medium hidden xl:block">
         {theme === 'light' ? 'Claro' : 'Oscuro'}
       </span>
     </div>

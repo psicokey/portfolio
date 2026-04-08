@@ -1,8 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // No renderizar el footer global en la página de LKE Web
+  if (pathname === "/lke-web") return null;
+
   return (
     <footer className="flex flex-col items-center justify-center px-4 text-center bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-950">
       <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
